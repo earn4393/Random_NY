@@ -13,8 +13,6 @@ def read_excel_file():
     return df
 
 # เพิ่มไฟล์ Excel ใหม่
-
-
 def add_new_excel_file():
     global employee_df, employee_names
     file_path = filedialog.askopenfilename(
@@ -39,7 +37,7 @@ def generate_random_code():
         result_label.config(text="ไม่มีรายชื่อพนักงานที่เหลือ")
     generate_button.config(state="active")  # เปิดปุ่มสุ่มอีกครั้ง
 
-
+# เริ่มต้น GUI
 root = tk.Tk()
 root.title("แจกรางวัลปีใหม่")
 
@@ -80,6 +78,7 @@ generate_button.config(foreground="white", background="green",
 generate_button.pack(padx=20, pady=2)
 generate_button.config(width=15, height=1)
 
+# ผลลัพธ์การสุ่ม 
 result_label = tk.Label(root, text="", font=(
     "Helvetica", 20), background='white')
 result_label.pack(padx=20, pady=20)
